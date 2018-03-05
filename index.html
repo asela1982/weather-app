@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+    <title>Climate Application--Asela</title>
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+
+    <!-- plotly cdn -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <!-- This is my css file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- navigation -->
+    <nav class="navbar  navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Asela Dassanayake</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="../../aboutme/main.html">About Me
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../resume/main.html">Resume</a>
+                    </li>
+                 </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- ./navigation -->
+
+
+    <section class="main-content">
+        <div class="container">
+
+            <div style="background:#3D547E !important" class="jumbotron">
+                <img src="img/sunny.svg" style="height:50px" alt="">
+                <h1 style="color:white">Weather Forecast Web Application</h1>
+                <p style="color:white"> Visualize the weather forecast for the next 5 days for your prefered city</p>
+            </div>
+
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="exampleInputName2">City</label>
+                    <input type="text" class="form-control" id="exampleInputName2" placeholder="Paris,France">
+                </div>
+
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+
+
+            <div class="row">
+
+                <div class="col-md-8">
+                    <div class="panel panel-default" style="margin-top: 20px;">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Visualizing Trends</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div id="plotTemp"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="panel panel-default" style="margin-top: 20px;">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Map</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div id="plotMap" ></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default" style="margin-top: 20px;">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Table</h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-striped" id='summary-table'>
+                        <thead>
+                            <tr>
+                                <th>Coordinated Universal Time (UTC)</th>
+                                <th>Temperature</th>
+                                <th>Humidity, %</th>
+                                <th>Wind Speed</th>
+                                <th>Weather condition</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                        </tbody>
+
+                    </table>
+
+
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+
+    <!-- footer section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    All contents under a
+                    <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Attribution-ShareAlike 4.0 International License</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ./footer section -->
+
+
+    <script src="plots.js"></script>
+
+</body>
+
+</html>
